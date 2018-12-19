@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ComponentFramework.iml" filepath="$PROJECT_DIR$/ComponentFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/go_model_hotel/go_model_hotel.iml" filepath="$PROJECT_DIR$/go_model_hotel/go_model_hotel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_common/lib_common.iml" filepath="$PROJECT_DIR$/lib_common/lib_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/model_flight/model_flight.iml" filepath="$PROJECT_DIR$/model_flight/model_flight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/model_hotel/model_hotel.iml" filepath="$PROJECT_DIR$/model_hotel/model_hotel.iml" />
+    </modules>
+  </component>
+</project>

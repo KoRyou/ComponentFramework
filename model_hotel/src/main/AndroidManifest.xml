@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zgl.com.cn.model_hotel">
+
+    <application>
+        <activity android:name=".MainHotelActivity"></activity>
+    </application>
+
+</manifest>

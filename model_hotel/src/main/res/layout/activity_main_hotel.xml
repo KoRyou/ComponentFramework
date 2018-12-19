@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_dark"
+    tools:context="zgl.com.cn.model_hotel.MainHotelActivity">
+
+
+    <TextView
+        android:id="@+id/tv_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="初始化数据"/>
+
+    <Button
+        android:id="@+id/btn_net"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请求城市列表数据"/>
+    <TextView
+        android:id="@+id/tv_net"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="......"/>
+    <Button
+        android:id="@+id/btn_go_flight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="去机票页"/>
+
+
+
+    <Button
+        android:id="@+id/btn_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下载"/>
+
+    <Button
+        android:id="@+id/btn_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传"/>
+
+</LinearLayout>

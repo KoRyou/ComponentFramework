@@ -1,0 +1,26 @@
+ext{
+
+    isModule = false  // true：组件化(独立模块)   false：集成
+
+    defaultConfig = [
+            minSdkVersion :19,
+            targetSdkVersion :26,
+            versionCode :1,
+            versionName :"1.0",
+            testInstrumentationRunner: "android.support.test.runner.AndroidJUnitRunner"
+    ]
+
+    android = [
+            compileSdkVersion : 26
+    ]
+
+    applicationID = [
+            app:"zgl.com.cn.httputidemo",
+            model_hotel:"zgl.com.cn.model_hotel",
+            model_flight:"zgl.com.cn.model_flight"
+    ]
+
+    supportVersion = "27.1.1"
+    appcompatv7 = "com.android.support:appcompat-v7:${supportVersion}"
+
+}
