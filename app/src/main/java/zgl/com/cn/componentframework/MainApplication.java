@@ -33,9 +33,11 @@ public class MainApplication extends Application {
         }
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
 
-        //网络框架的初始化
+        //旧版网络框架
         HttpNetHelper.init(new RetrofitHttpRequest());
 
+
+        //最新网络框架的初始化
         NetHelper.init(new RetrofitWorker());
     }
 }

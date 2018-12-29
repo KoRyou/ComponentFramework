@@ -1,5 +1,6 @@
 package zgl.com.cn.model_flight;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,8 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+
+import zgl.com.cn.model_flight.drawlayout.ZSlideLayoutActivity;
 
 @Route(path = "/flight/MainFlightActivity")
 public class MainFlightActivity extends AppCompatActivity {
@@ -29,6 +32,7 @@ public class MainFlightActivity extends AppCompatActivity {
     private void initView() {
         Button btn_go_hotel =  findViewById(R.id.btn_go_hotels);
         TextView tv_msg = findViewById(R.id.tv_msg);
+        Button btn_drawer_layout = findViewById(R.id.btn_drawer_layout);
 
         tv_msg.setText(flightName+"---"+flightNO);
 
@@ -41,7 +45,12 @@ public class MainFlightActivity extends AppCompatActivity {
                         .navigation();
             }
         });
-
+        btn_drawer_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainFlightActivity.this, ZSlideLayoutActivity.class));
+            }
+        });
 
     }
 

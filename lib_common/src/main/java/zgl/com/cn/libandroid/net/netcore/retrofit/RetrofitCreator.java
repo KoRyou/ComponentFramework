@@ -13,10 +13,11 @@ import zgl.com.cn.libandroid.net.netcore.download.ProgressResponseBody;
 import zgl.com.cn.libandroid.net.network.utils.ProtoConverterFactory;
 
 /**
- * todo 描述：模块名_具体页面描述
+ *  描述：Retrofit创建类
  *
  * @author : jsj_android
  * @date : 2018/11/30
+ *
  */
 
 public class RetrofitCreator {
@@ -43,7 +44,7 @@ public class RetrofitCreator {
                         .client(client)
                         // 添加Rx适配器
                         // .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                        //设置数据解析器  //一定要在gsonconvert的前面  【！！！必须引用本地的ProtoConverterFactory，否则构建失败！！！】
+                        //设置数据解析器  //一定要在gsonconvert的前面
                         .addConverterFactory(ProtoConverterFactory.create())
                         //设置Json数据的转换器为Gson
                         .addConverterFactory(GsonConverterFactory.create())

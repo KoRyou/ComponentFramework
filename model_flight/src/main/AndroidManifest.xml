@@ -3,7 +3,8 @@
     package="zgl.com.cn.model_flight">
 
     <application>
-        <activity android:name=".MainFlightActivity"></activity>
+        <activity android:name=".MainFlightActivity" />
+        <activity android:name=".drawlayout.ZSlideLayoutActivity"></activity>
     </application>
 
 </manifest>

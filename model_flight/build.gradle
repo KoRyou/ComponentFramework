@@ -1,6 +1,6 @@
-if(isModule){
+if (isModule) {
     apply plugin: 'com.android.application'
-}else{
+} else {
     apply plugin: 'com.android.library'
 }
 
@@ -11,7 +11,7 @@ def appId = rootProject.ext.applicationID
 android {
     compileSdkVersion sdk.compileSdkVersion
     defaultConfig {
-        if(isModule){
+        if (isModule) {
             applicationId appId.model_flight
         }
         minSdkVersion cfg.minSdkVersion
@@ -30,14 +30,14 @@ android {
     }
 
     /* 组件化配置【清单文件】【资源】 */
-    sourceSets{
-        main{
-            if(isModule){
+    sourceSets {
+        main {
+            if (isModule) {
                 manifest.srcFile "src/main/unit/AndroidManifest.xml"
-            }else{
+            } else {
                 manifest.srcFile "src/main/AndroidManifest.xml"
                 //集成开发模式下排除unit文件夹中的所有Java文件
-                java{
+                java {
                     exclude "unit/**"
                 }
             }

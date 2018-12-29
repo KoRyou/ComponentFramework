@@ -25,7 +25,7 @@ import zgl.com.cn.libandroid.net.network.bean.ZRequest;
 import zgl.com.cn.libandroid.net.network.bean.ZResponse;
 
 /**
- * todo 描述：模块名_具体页面描述
+ *  描述：okhttp请求需要的接口
  *
  * @author : jsj_android
  * @date : 2018/11/30
@@ -61,7 +61,6 @@ public interface ApiService {
      * 下载是直接到内存,所以需要 @Streaming
      * @param url
      * @param headers  用于断点续传的请求头  range:bytes=300-
-     * @param params
      * @return
      */
     @Streaming
@@ -77,8 +76,6 @@ public interface ApiService {
     @Multipart
     @POST
     Call<ResponseBody> upload(@Url String url, @Part MultipartBody.Part file);
-
-
 
 
 }

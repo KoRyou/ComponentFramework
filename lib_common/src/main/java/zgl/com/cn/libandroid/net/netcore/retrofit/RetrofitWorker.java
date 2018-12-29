@@ -22,7 +22,7 @@ import zgl.com.cn.libandroid.net.netcore.download.DownloadHandler;
 import zgl.com.cn.libandroid.net.network.bean.ZResponse;
 
 /**
- * todo 描述：模块名_具体页面描述
+ *  描述：使用retrofit进行网络请求
  *
  * @author : jsj_android
  * @date : 2018/11/30
@@ -36,7 +36,7 @@ public class RetrofitWorker extends NetClient implements IRequest {
     private final Map mJsonHeader, mProtoHeader;
 
     public RetrofitWorker() {
-        mJsonHeader = new HashMap(2);
+        mJsonHeader = new HashMap(3);
         mJsonHeader.put("Content-Type", "application/json");
         mJsonHeader.put("Accept", "application/json");
         mJsonHeader.put("Cache-Control", "no-cache");

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zgl.com.cn.model_flight.drawlayout.ZSlideLayoutActivity">
+
+
+    <zgl.com.cn.model_flight.drawlayout.ZDrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--主页内容布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是主布局"/>
+        </LinearLayout>
+
+        <!--左侧栏内容布局-->
+        <zgl.com.cn.model_flight.drawlayout.ZDrawSlideLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/slide_bg"
+            android:gravity="center_vertical"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            >
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@mipmap/circle"
+                android:text="朋友圈" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@mipmap/wallet"
+                android:text="钱包" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@mipmap/coupon"
+                android:text="优惠券" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@mipmap/friends"
+                android:text="好友" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@mipmap/settings"
+                android:text="设置" />
+        </zgl.com.cn.model_flight.drawlayout.ZDrawSlideLayout>
+        
+    </zgl.com.cn.model_flight.drawlayout.ZDrawerLayout>
+
+</RelativeLayout>

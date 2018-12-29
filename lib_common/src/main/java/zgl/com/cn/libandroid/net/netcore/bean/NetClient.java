@@ -12,7 +12,7 @@ import zgl.com.cn.libandroid.net.netcore.callback.ISuccess;
 import zgl.com.cn.libandroid.net.network.bean.ZRequest;
 
 /**
- * todo 描述：模块名_具体页面描述
+ * 描述：网络请求参数实体
  *
  * @author : jsj_android
  * @date : 2018/11/29
@@ -20,27 +20,62 @@ import zgl.com.cn.libandroid.net.network.bean.ZRequest;
 
 public class NetClient {
 
-    protected  String BASEURL;
-    protected  String URL;
-    protected  String TAG;
-    protected  HttpMethod HTTPMETHOD;
-    protected  Map<String, String> HEADERS;
-    protected  Map<String, Object> PARAMS;
-    protected  RequestBody REQBODY;
-    protected  ZRequest ZREQUEST;
+    /**
+     * 基础URL
+     */
+    protected String BASEURL;
+    /**
+     * 除base url 之外的url
+     */
+    protected String URL;
+    /**
+     * 每个请求的唯一标示（用于取消请求）
+     */
+    protected String TAG;
+    /**
+     * 请求方式
+     */
+    protected HttpMethod HTTPMETHOD;
+    /**
+     * 请求头（特殊请求头需要此参数）
+     */
+    protected Map<String, String> HEADERS;
+    /**
+     * 请求参数通过Map的形式
+     */
+    protected Map<String, Object> PARAMS;
+    /**
+     * 请求参数通过RequestBody的形式
+     */
+    protected RequestBody REQBODY;
+    /**
+     * 请求参数通过ZRequest的形式（仅proto时）
+     */
+    protected ZRequest ZREQUEST;
+    /**
+     * 成功-失败-错误，请求开始结束 的监听
+     */
+    protected IListener LISTENER;
+    protected ISuccess SUCCESS;
+    protected IFailure FAILURE;
+    protected IError ERROR;
 
-    protected  IListener LISTENER;
-    protected  ISuccess SUCCESS;
-    protected  IFailure FAILURE;
-    protected  IError ERROR;
+    //---------上传  &  下载----------
 
-    //上传  &  下载
+    /**
+     * 上传的文件
+     */
+    protected File FILE;
 
-    protected  File FILE;
-
-    protected  String DOWNLOAD_DIR;
-    protected  String EXTENSION;
-    protected  String FILENAME;
+    /**
+     * 下载的 文件路径（系统根目录之后的部分）
+     * 下载文件的扩展名
+     * 下载文件的名字
+     * 下载的进度监听
+     */
+    protected String DOWNLOAD_DIR;
+    protected String EXTENSION;
+    protected String FILENAME;
     protected IProgress PROGRESS;
 
 
