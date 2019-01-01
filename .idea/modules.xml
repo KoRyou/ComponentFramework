@@ -3,11 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ComponentFramework.iml" filepath="$PROJECT_DIR$/ComponentFramework.iml" />
+      <module fileurl="file://F:\Z_Model\ComponentFramework\ComponentFramework.iml" filepath="F:\Z_Model\ComponentFramework\ComponentFramework.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\Z_Model\ComponentFramework\app\app.iml" filepath="F:\Z_Model\ComponentFramework\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/go_model_hotel/go_model_hotel.iml" filepath="$PROJECT_DIR$/go_model_hotel/go_model_hotel.iml" />
+      <module fileurl="file://F:\Z_Model\ComponentFramework\go_model_hotel\go_model_hotel.iml" filepath="F:\Z_Model\ComponentFramework\go_model_hotel\go_model_hotel.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_common/lib_common.iml" filepath="$PROJECT_DIR$/lib_common/lib_common.iml" />
+      <module fileurl="file://F:\Z_Model\ComponentFramework\lib_common\lib_common.iml" filepath="F:\Z_Model\ComponentFramework\lib_common\lib_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/model_flight/model_flight.iml" filepath="$PROJECT_DIR$/model_flight/model_flight.iml" />
+      <module fileurl="file://F:\Z_Model\ComponentFramework\model_flight\model_flight.iml" filepath="F:\Z_Model\ComponentFramework\model_flight\model_flight.iml" />
       <module fileurl="file://$PROJECT_DIR$/model_hotel/model_hotel.iml" filepath="$PROJECT_DIR$/model_hotel/model_hotel.iml" />
+      <module fileurl="file://F:\Z_Model\ComponentFramework\model_hotel\model_hotel.iml" filepath="F:\Z_Model\ComponentFramework\model_hotel\model_hotel.iml" />
     </modules>
   </component>
 </project>

@@ -1,9 +1,15 @@
 package zgl.com.cn.model_flight.drawlayout;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Shader;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -13,12 +19,16 @@ import android.view.View;
  *
  * @author : jsj_android
  * @date : 2018/12/29
+ *
+ * path的各种方法的综合运用
+ * https://www.jianshu.com/p/db01b37b6231
  */
 
 public class ZDrawBgView extends View {
 
     private Paint mPaint;
     private Path mPath;
+    private BitmapDrawable mDrawable;
 
     public ZDrawBgView(Context context) {
         this(context,null);
@@ -44,7 +54,12 @@ public class ZDrawBgView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
 
-
+        //如果存在图片背景
+        if (mDrawable!=null) {
+            Bitmap bitmap = mDrawable.getBitmap();
+            Shader shader = new BitmapShader(bitmap,Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
+            mPaint.setShader(shader);
+        }
 
         mPaint.setStyle(Paint.Style.FILL);
         canvas.drawPath(mPath,mPaint);
@@ -57,7 +72,7 @@ public class ZDrawBgView extends View {
      */
     public void setTouchY(float y,float percent){
 
-        /*mPath.reset();
+        mPath.reset();
         float width = getWidth()*percent;
         float height = getHeight();
         float pointX = width/2;
@@ -65,10 +80,25 @@ public class ZDrawBgView extends View {
         float offsetY = height/8;
         //设置第一个Y的位置
         mPath.lineTo(pointX,-offsetY);
-        mPath.quadTo(width*3/2,y,pointX,height+offsetY);
-        mPath.lineTo();*/
+        mPath.quadTo(width*3/2,  y,  pointX,  height+offsetY);
+        mPath.lineTo(0,height);
+        mPath.close();
+        //X轴平移,去掉背景的空白
+        mPath.offset(getWidth()-width,0);
+        //刷新布局
+        invalidate();
     }
 
+
+    public void setColor(Drawable color){
+        //传入的颜色可能为图，也可能为色值
+        if(color instanceof ColorDrawable){
+            ColorDrawable colorDrawable = (ColorDrawable)color;
+            mPaint.setColor(colorDrawable.getColor());
+        }else if(color instanceof BitmapDrawable){
+            this.mDrawable = (BitmapDrawable) color;
+        }
+    }
 
 
 }
