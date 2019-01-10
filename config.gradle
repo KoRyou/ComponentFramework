@@ -23,4 +23,12 @@ ext{
     supportVersion = "27.1.1"
     appcompatv7 = "com.android.support:appcompat-v7:${supportVersion}"
 
+    kotlin_version = '1.2.71'
+
+    //官方AAC架构
+    archLifeCyclerRumtime = '1.1.0'
+    archLifeCyclerExtensions = '1.1.0'
+    archLifeCyclerCompiler = '1.1.0'
+
+
 }

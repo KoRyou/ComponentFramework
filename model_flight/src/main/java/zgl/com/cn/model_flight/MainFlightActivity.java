@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 
+import zgl.com.cn.model_flight.aac.AACActivity;
 import zgl.com.cn.model_flight.drawlayout.ZSlideLayoutActivity;
 
 @Route(path = "/flight/MainFlightActivity")
@@ -33,6 +34,7 @@ public class MainFlightActivity extends AppCompatActivity {
         Button btn_go_hotel =  findViewById(R.id.btn_go_hotels);
         TextView tv_msg = findViewById(R.id.tv_msg);
         Button btn_drawer_layout = findViewById(R.id.btn_drawer_layout);
+        Button btn_aac = findViewById(R.id.btn_aac);
 
         tv_msg.setText(flightName+"---"+flightNO);
 
@@ -52,6 +54,12 @@ public class MainFlightActivity extends AppCompatActivity {
             }
         });
 
+        btn_aac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainFlightActivity.this, AACActivity.class));
+            }
+        });
     }
 
 

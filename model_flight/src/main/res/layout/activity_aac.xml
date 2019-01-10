@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/ll_main"
     android:orientation="vertical"
     >
 
     <TextView
-        android:id="@+id/tv_hotel"
+        android:id="@+id/tv_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:gravity="center"
-        android:textSize="16dp"
-        android:text="酒店"/>
-    <TextView
-        android:id="@+id/tv_flight"
-        android:layout_width="match_parent"
+        android:text="ce shi" />
+
+
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:gravity="center"
-        android:textSize="16dp"
-        android:background="@color/colorAccent"
-        android:text="机票(所有DEMO在里面)"/>
+        android:text="点我呀"/>
+
 
 </LinearLayout>

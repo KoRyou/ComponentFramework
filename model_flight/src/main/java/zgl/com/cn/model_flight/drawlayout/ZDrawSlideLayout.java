@@ -70,7 +70,7 @@ public class ZDrawSlideLayout extends LinearLayout {
 
         //比例
         int centerY = child.getTop() + child.getHeight()/2;
-        float distance = Math.abs(touchY=centerY);
+        float distance = Math.abs(touchY-centerY);
         float scale = distance/slideLayout.getHeight()*3;  // 距离中心点距离与 SlideLayout 的 1/3 对比
         //滑动距离
         float translationX=0;
@@ -79,8 +79,14 @@ public class ZDrawSlideLayout extends LinearLayout {
     }
 
     public void onMotionEventUp() {
-        //TODO 手指松开，锁定的条目就被选中
-
+        // 手指松开，锁定的条目就被选中
+        for (int i = 0; opened && i < getChildCount(); i++) {
+            View child = getChildAt(i);
+            if (child.isPressed()) {
+                child.performClick();
+                return;
+            }
+        }
 
     }
 }

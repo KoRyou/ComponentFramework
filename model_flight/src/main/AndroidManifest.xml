@@ -4,7 +4,8 @@
 
     <application>
         <activity android:name=".MainFlightActivity" />
-        <activity android:name=".drawlayout.ZSlideLayoutActivity"></activity>
+        <activity android:name=".drawlayout.ZSlideLayoutActivity" />
+        <activity android:name=".aac.AACActivity" />
     </application>
 
 </manifest>

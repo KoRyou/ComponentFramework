@@ -64,4 +64,11 @@ dependencies {
 
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     implementation project(':lib_common')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
+apply plugin: 'kotlin-android'
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'kotlin-android-extensions'
