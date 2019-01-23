@@ -3,7 +3,6 @@ if(isModule){
 }else{
     apply plugin: 'com.android.library'
 }
-
     def cfg = rootProject.ext.defaultConfig
     def sdk = rootProject.ext.android
     def appId = rootProject.ext.applicationID
@@ -26,9 +25,7 @@ if(isModule){
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
-
     }
-
         /* 组件化配置【清单文件】【资源】 */
         sourceSets{
             main{
