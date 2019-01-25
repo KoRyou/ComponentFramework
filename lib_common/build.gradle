@@ -53,10 +53,9 @@ dependencies {
     // 替换成最新版本, 需要注意的是api
     // 要与compiler匹配使用，均使用最新版可以保证兼容
     compile 'com.alibaba:arouter-api:1.4.1'
-
     //支持AAC框架
     api "android.arch.lifecycle:runtime:${archLifeCyclerRumtime}"
     api "android.arch.lifecycle:extensions:${archLifeCyclerExtensions}"
     annotationProcessor "android.arch.lifecycle:compiler:${archLifeCyclerCompiler}"
-
+    api files('libs/fastjson-1.1.70.android.jar')
 }
